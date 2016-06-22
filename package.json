@@ -32,6 +32,7 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
+    "@angular/router-deprecated": "^2.0.0-rc.2",
     "codelyzer": "0.0.22",
     "concurrently": "^2.1.0",
     "del": "^2.2.0",
