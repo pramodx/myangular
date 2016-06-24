@@ -8,6 +8,7 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings",
+    "clean": "gulp clean",
     "build:vendor": "gulp vendor",
     "build:dev": "gulp clean && gulp vendor && gulp build",
     "build:dev.watch": "gulp clean && gulp vendor && gulp",

@@ -63,13 +63,6 @@ gulp.task('vendor', function() {
         .pipe(gulp.dest(dist + '/vendor/zone.js/'));
 });
 
-gulp.task('test', function (done) {
-  return new Server({
-    configFile: __dirname + '/karma.conf.js',
-    singleRun: true
-  }, done).start();
-});
-
 gulp.task('watch', function() {
    gulp.watch(src + '**/*.ts', ['build-ts']);
    gulp.watch(src + '**/*.{html,htm,css}', ['build-copy']);
