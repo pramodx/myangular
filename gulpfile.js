@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var gulpif = require('gulp-if');
 var args = require('yargs').argv;
+var Server = require('karma').Server;
 
 var typescript = require('gulp-typescript');
 var sourcemaps = require('gulp-sourcemaps');
@@ -60,6 +61,13 @@ gulp.task('vendor', function() {
     //zonejs
     return gulp.src('node_modules/zone.js/**')
         .pipe(gulp.dest(dist + '/vendor/zone.js/'));
+});
+
+gulp.task('test', function (done) {
+  return new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, done).start();
 });
 
 gulp.task('watch', function() {
