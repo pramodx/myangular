@@ -1,5 +1,3 @@
-
-
 import {ROUTER_DIRECTIVES, RouteConfig, Router} from "@angular/router-deprecated";
 import {SearchComponent} from "./components/search.component";
 import {ArtistComponent} from "./components/artist.component";

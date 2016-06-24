@@ -41,10 +41,6 @@ gulp.task('vendor', function() {
     gulp.src(['node_modules/@angular/**'])
         .pipe(gulp.dest(dist + 'vendor/@angular'));
 
-    //ES6 Shim
-    gulp.src('node_modules/es6-shim/**')
-        .pipe(gulp.dest(dist + '/vendor/es6-shim/'));
-
     //reflect metadata
     gulp.src('node_modules/reflect-metadata/**')
         .pipe(gulp.dest(dist + '/vendor/reflect-metadata/'));
@@ -56,14 +52,10 @@ gulp.task('vendor', function() {
     //systemjs
     gulp.src('node_modules/systemjs/**')
         .pipe(gulp.dest(dist + '/vendor/systemjs/'));
-    
+
     // ng2-bootstrap
     gulp.src('node_modules/ng2-bootstrap/**')
         .pipe(gulp.dest(dist + '/vendor/ng2-bootstrap/'));
-
-    // moment
-    gulp.src('node_modules/moment/**')
-        .pipe(gulp.dest(dist + '/vendor/moment/'));
 
     //zonejs
     return gulp.src('node_modules/zone.js/**')
